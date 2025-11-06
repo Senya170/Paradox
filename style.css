@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fa;
+    color: #222;
+    line-height: 1.7;
+  }
+  
+  /* Герой-заголовок */
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgba(0, 40, 80, 0.85), rgba(0, 10, 30, 0.75)),
+                url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.12), transparent 70%);
+    z-index: 1;
+  }
+  
+  .hero .overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px;
+    animation: fadeIn 1.6s ease-in-out;
+  }
+  
+  .hero h1 {
+    font-size: 3.8em;
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    color: #e0ebff;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Анімація появи */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Основні секції */
+  .block {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .block:hover {
+    transform: translateY(-5px);
+  }
+  
+  .block.alt {
+    background: #e8f2ff;
+  }
+  
+  .block h2 {
+    color: #004080;
+    margin-top: 0;
+  }
+  
+  .block img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 20px;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  .conclusion {
+    background: #004080;
+    color: white;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #00264d;
+    color: white;
+  }
